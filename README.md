@@ -31,3 +31,16 @@ clientExampleLogin: http://localhost:1338/example
 ```
 node server.js
 ```
+##Manual Shut Down
+####(Mongo will need to be shutdown)
+```
+ brew services stop mongodb 
+```
+####(Shows all running services)
+```
+ brew services list
+```
+####(Cleansup all running services)
+```
+ brew services cleanup
+```
