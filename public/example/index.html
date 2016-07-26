@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Login</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+
+  <div id="main">
+
+    <div id="current-user"></div>
+
+    <h1>Log Out</h1>
+    <div>
+      <button id="logout">Log Out</button>
+    </div>
+
+    <h1>Login</h1>
+    <form id="login">
+      <p><input id="login-id" type="text"></p>
+      <p><input id="login-pwd" type="password"></p>
+      <p><input id="login-submit" type="submit" value="Login"></p>
+    </form>
+
+    <h1>Sign Up</h1>
+    <form id="signup">
+      <p><input id="signup-id" type="text"></p>
+      <p><input id="signup-pwd" type="password"></p>
+      <p><input id="signup-submit" type="submit" value="Sign Up"></p>
+    </form>
+
+  </div>
+
+  <!--script type="text/javascript">
+    Parse.initialize("aoWh2ssswbal0VcQQ6Ya0wUdVf9UjWqyFgVpywNb", "Lx9jFUhBAe32rnGzfNGAQt9ICcqlGFH4jgcKQjpK");
+    console.log("Parse server conntected.");
+
+    //login
+    $("#login").submit(function(event){
+      event.preventDefault();
+
+      var login_name = $("#login-id").val();
+      var login_pwd = $("#login-pwd").val();
+
+      Parse.User.logIn(login_name, login_pwd, {
+        success: function(){
+          console.log("Login successfully.");
+        }, error: function(user, error){
+          console.log("Login error: "+error.message);
+        }
+      });
+    });
+
+    //log out
+    $("#logout").click(function(event){
+      Parse.User.logOut();
+      console.log("Log out succeed.");
+    });
+
+    //sign up
+    $("#signup").submit(function(event){
+      event.preventDefault();
+        console.log("button clicked");
+        var userid_value = $("#signup-id").val();
+        var userpwd_value = $("#signup-pwd").val();
+
+        var user = new Parse.User();
+        user.set("username", userid_value);
+        user.set("password", userpwd_value);
+
+        user.signUp(null, {
+          success: function(){
+            console.log("Sign up successfully.");
+          }, error: function(user, error){
+            console.log("Sign Up error: "+error.message);
+          }
+        });
+    });
+  </script-->
+
+  
+</body>
+
+</html>
